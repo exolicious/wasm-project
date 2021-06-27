@@ -1,0 +1,12 @@
+{
+  "name": "js-calculator",
+  "collaborators": [
+    "exolicious <egzon.demaj@hotmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "js_calculator.js"
+  ],
+  "module": "js_calculator.js",
+  "sideEffects": false
+}

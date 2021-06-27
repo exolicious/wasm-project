@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello wasm-pack!</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-shrink: 1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      #settings {
+        margin-left: 20px;
+      }
+      #results {
+        margin-left: 20px;
+        width: 5%;
+        height: 100px;
+      }
+      textarea {
+        width: 10%;
+        height: 100px;
+      }
+      .canvas-wrapper {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+    <div id="settings">
+      <input readonly type="text" id="formula" name="formula">
+      <select id="engine-select">
+        <option value="js">
+          JS
+        </option>
+        <option value="wasm">
+          wasm
+        </option>
+      </select>
+      <button id="run">
+        run
+      </button>
+    </div>
+      <textarea id="textarea" readonly></textarea>
+      <canvas id="canvas" width="1000" height="500"></canvas>
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>
