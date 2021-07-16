@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "wasm-calculator": "file:../pkg",
-    "js-calculator": "file:../src/js"
+    "js-trapezverfahren": "file:../src/js"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js",

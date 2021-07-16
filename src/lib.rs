@@ -26,16 +26,29 @@ pub fn add(a: u32, b: u32 ) -> u32 {
 
 
 #[wasm_bindgen]
-pub fn trapez_verfahren(a: f32, b: f32, n: i64) -> f32 {
-    let h: f32 = (b-a)/ n as f32;
-    let mut iterational_part: f32 = 0.;
-    for i in 1..n-1 {
-        iterational_part += f(a+i as f32*h);
+pub fn trapez_verfahren(a: f64, b: f64, n: u32) -> f64 {
+    let h: f64 = (b-a)/ n as f64;
+    let mut iterational_part: f64 = 0.;
+    for i in 1..n {
+        iterational_part += f(a+i as f64*h);
     }
-    h*(0.5*f(a)+0.5*f(b) + iterational_part)
+    return h*(0.5*f(a)+0.5*f(b) + iterational_part);
 }
 
-
-fn f(x: f32) -> f32 {
-    return x*2.;
+fn f(x: f64) -> f64 {
+    return x.sin();
 }
+
+#[wasm_bindgen]
+pub fn fib(n: u32) -> u32 {
+    if n == 1 {
+        return 1;
+    }
+    else if n == 2 {
+        return 1;
+    }
+    else {
+        return fib(n-1) + fib(n-2);
+    }
+}
+

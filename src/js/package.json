@@ -1,12 +1,15 @@
 {
-  "name": "js-calculator",
+  "name": "js-trapezverfahren",
   "collaborators": [
     "exolicious <egzon.demaj@hotmail.com>"
   ],
   "version": "0.1.0",
   "files": [
-    "js_calculator.js"
+    "JSClasses.js"
   ],
-  "module": "js_calculator.js",
+  "dependencies": {
+    "wasm-calculator": "../../pkg"
+  },
+  "module": "JSClasses.js",
   "sideEffects": false
 }
